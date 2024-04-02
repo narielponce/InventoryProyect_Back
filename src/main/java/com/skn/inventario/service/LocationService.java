@@ -1,8 +1,6 @@
 package com.skn.inventario.service;
 
-import com.skn.inventario.model.Categorie;
 import com.skn.inventario.model.Location;
-import com.skn.inventario.repository.CategoryRepository;
 import com.skn.inventario.repository.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

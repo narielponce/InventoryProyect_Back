@@ -14,20 +14,16 @@ public class Product {
     private String code;
 
     @ManyToOne
-    @JoinColumn(name = "idCategorie")
-    private Categorie categorie;
+    @JoinColumn(name = "idCategory")
+    private Category category;
 
     @ManyToOne
-    @JoinColumn(name = "idBranch")
-    private Branch branch;
+    @JoinColumn(name = "idBrand")
+    private Brand brand;
 
     private String description;
 
     private String serial;
-
-    @ManyToOne
-    @JoinColumn(name = "idLocation")
-    private Location location;
 
     private Long initialStock;
 }

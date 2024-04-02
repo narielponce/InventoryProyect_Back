@@ -1,6 +1,6 @@
 package com.skn.inventario.service;
 
-import com.skn.inventario.model.Categorie;
+import com.skn.inventario.model.Category;
 import com.skn.inventario.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,10 +14,10 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    public ResponseEntity<List<Categorie>> search(){
+    public ResponseEntity<List<Category>> search(){
         try{
-            List<Categorie> categorieList = (List<Categorie>) categoryRepository.findAll();
-            return new ResponseEntity<>(categorieList, HttpStatus.OK);
+            List<Category> categoryList = (List<Category>) categoryRepository.findAll();
+            return new ResponseEntity<>(categoryList, HttpStatus.OK);
         }catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
